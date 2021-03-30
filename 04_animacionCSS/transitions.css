@@ -1,0 +1,69 @@
+/* transitions.css */
+
+div{
+	height: 200px;
+	width: 200px;
+	background-color: rgba(255,25,21,1);
+	margin: 50px auto;
+
+}
+
+.uno{/* inicio de la animacion  */
+	/* transition-duration: 1s; */
+	/* transition-property: background-color; */
+	/* transition-delay: 0s; */
+	/* transition-timing-function: ease; */
+	transition: 0.5s all 0s ease;
+}
+
+.uno:hover{ /*final de animacion*/
+	/*hover -> sobre*/
+	background-color: aquamarine;
+	border-radius: 50%;
+}
+.uno:active{
+	/*active -> clic mantenido*/
+	background-color: rgb(102, 24, 11);
+	box-shadow: grey 5px 5px 0px;
+}
+
+.dos{
+	background-color: gold;
+	transition: 1s ease all 0s;
+	cursor:pointer
+}
+.dos:hover{
+	background-color: goldenrod;
+	transform: scale(2,0.5);
+	/* width: 350px;
+	height: 150px ; */
+}
+
+.tres{
+	transition: 0.3s;
+	/* background-image: url('img/caras.png'); */
+}
+.tres:hover{
+	/* transform: rotate(0.5turn) scale(1.2) translateX(50px); */
+	transform: skew(45deg,45deg);
+	filter: grayscale(1);
+}
+.tres:active{
+	background-image: url('img/gatito.jpg');
+}
+
+.cuatro{
+	transition: 1s;
+}
+.cuatro:hover{
+	transform: rotate(360deg) /*scale(1.2)*/;
+	transform-origin: left top ; /*ejex ejeY*/
+}
+
+
+
+
+
+
+
+
