@@ -1,0 +1,89 @@
+img{
+    width: 100%;
+}
+
+/*
+0) Planificar lo que se va a animar
+
+1) Definimos el progreso de la animacion
+progreso / tiempo
+*/
+@keyframes latido1{
+    /*avance de la animacion -> definiendo keyframes*/
+    /*
+    frames -> cuadros ordinarios de la animacion
+    keyframes -> cuadro especial que tiene algun/os cambios
+    */
+    0%{transform: scale(1);}
+    50%{transform: scale(0.8); background: gold; padding:0}
+    100%{transform: scale(1);}
+}
+@keyframes latido2{
+    0%{transform: scale(1);}
+    50%{transform: scale(0.8);}
+    100%{transform: scale(1);}
+}
+@keyframes colores1{
+    50%{
+        background: hotpink;
+    }
+}
+/*2) aplicarla a un elemento*/
+@keyframes logo1 {
+    100%{ 
+        transform: translateX(600px) /*rotate(2turn)*/;
+        color:tomato;
+    }
+}
+
+body{
+    animation-name: colores1;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+.titulo {
+    text-align: center;
+    animation-name: latido2;
+    animation-duration:4s;
+    animation-iteration-count: infinite;/*iteration = ciclo*/
+    /* animation-delay:0s; */
+}
+.heart{
+    width: 30%;
+    margin: 0 auto;
+    animation-name: latido2;
+    animation-duration: 2000ms;
+    animation-iteration-count: infinite;
+    /* animation-delay:4s; */
+    padding: 20px;
+    background: aquamarine;
+    border-radius: 50%;
+}
+.logo{
+    width:20%;
+    animation-name: logo1;
+    animation-duration: 4s;
+    /* animation-delay:6s; */
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    /* animation-timing-function: cubic-bezier(.5,-0.64,.55,1.56); */
+    /* animation-play-state: running; */
+    animation-direction: alternate-reverse;
+    /*controla la direccion del progreso de la animacion
+    normal -> 0-100
+    alternate -> 0-100-0
+    reverse -> 100-0
+    alternate-reverse -> 100-0-100
+     */    
+}
+.logo:hover{
+    animation-play-state: paused;
+}
+@keyframes opacidad1{
+    100%{opacity:0}
+}
+.texto2{
+    animation-name:opacidad1;
+    animation-duration: 8s;
+    animation-fill-mode: forwards;
+}

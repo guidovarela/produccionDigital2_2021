@@ -1,0 +1,50 @@
+*{
+    margin: 0;padding:0;
+}
+html{font-family: arial;font-size: 16px;}
+
+header{
+    padding: 3%;
+    background:gold;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    /*se ubica en relacion al viewport o <body>*/
+    position: sticky;
+    top:0;
+    z-index:9999;/*solo funciona en absolute, fixed y sticky*/
+}
+
+.caja1{
+    margin:3em auto;
+
+}
+
+.sec1{
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 3em;
+    }
+    .cajaAbsolute{
+        /*Padre relative*/
+        position: relative;
+        }
+        .texto1{
+            position:absolute;
+            /* top / bottom / left / right */
+            top:30%;
+            left:20%;
+            
+        }
+        .toasty{
+            /*Hijo Absolute*/
+            width: 150px;
+            position: absolute;
+            /* top / bottom / left / right */
+            bottom: 20px;
+            right:20px;
+            
+        }
+        .img-adjust{
+            width: 100%;
+        }

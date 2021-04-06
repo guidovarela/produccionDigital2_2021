@@ -1,0 +1,121 @@
+html{
+	font-family: 'arial', sans-serif;
+	font-size: 16px;
+}
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background: url('../img/space-bg.jpg');
+	background-size: cover;
+	overflow: hidden;
+}
+
+@keyframes show1{
+	0%{opacity:1}
+	100%{opacity:0}
+}
+
+@keyframes planeta1{
+	0%{transform: rotate(0deg);}
+	100%{transform: rotate(360deg);}
+}
+@keyframes planeta2{
+	0%{transform: translateY(0px);}
+	100%{transform: translateY(10px);}
+}
+@keyframes cometa1{
+	0%{transform: translateX(-200px) translateY(-200px);}
+	100%{transform: translateX(3500px) translateY(2200px) scale(10);}
+}
+@keyframes pendulo{
+	0%{
+		transform: rotate(0);
+	}
+	50%{transform: rotate(10deg);}
+	100%{transform: rotate(0);}
+}
+
+.caja{
+	border:2px solid tomato;
+	background: white;
+	padding: 20px;
+	z-index: -152000000 ;
+}
+.tierra{
+	position: absolute;
+	z-index: 4;
+	width: 400px;
+	right: 20%;
+	top: 20%;
+	animation: planeta1 100s infinite linear;
+}
+
+.luna{
+	position: absolute;
+	z-index: 5;
+	width:100px;
+	right: 20%;
+	top: 20%;
+	animation: pendulo 2s infinite ease-in-out;
+	transform-origin: top;
+	
+
+}
+.jupiter{
+	position: absolute;
+	bottom: -50%;
+	left: -10%;
+	animation: planeta2 1s infinite alternate ease-in-out;
+}
+.cometa{
+	position: absolute;
+	z-index: 10;
+	width: 400px;	
+	/* animation-name: show1;
+	animation-duration: 2s;
+	animation-fill-mode:forwards; */
+	opacity: 0;
+	transition: 2s;
+}
+.cometa:hover{
+	opacity: 1;
+}
+/*.cometa2{
+	position: absolute;
+	z-index: 4;
+	right: 0;
+	top: 0px;
+	width: 100px;	
+	animation: 'cometa1' 1s 5s ease-out infinite reverse;
+}*/
+.cometa img{transform: scaleX(-1);}
+img{width: 100%}
+
+@keyframes arsat{
+	0%{
+		/*width: 1px;*/
+		transform:scale(0,0);
+		opacity: 0;
+	}
+	1%{opacity: 1;}
+	100%{
+		/*width: 100%;*/
+		transform:scale(1,1);
+
+	}
+}
+.arsat{
+	position: absolute;
+	top: 40%;
+	/*left: 50%;*/
+	z-index: 100;
+	opacity: 0;
+	animation-name: arsat;
+	animation-duration: 10s;
+	animation-timing-function: ease-out;
+	animation-direction: alternate;
+	animation-iteration-count: infinite;
+
+}
