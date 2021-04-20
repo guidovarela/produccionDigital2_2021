@@ -1,0 +1,152 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+html{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+div img{
+    width:100%;
+}
+
+/* BG */
+.bg{
+    background-image: url("../img/natureBG.png");
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100vw; /*vw -> viewport width*/
+    height: 100vh; /*vh -> viewport height*/
+    position: relative;
+}
+
+.titulo{
+    position: relative;
+    /*top, right, left, bottom*/
+    top:-55px; 
+    left:10%;
+    /* transform: translate(20%,200px); */
+}
+.nube{
+    position: absolute;
+    /* Los elementos absolutos deben anidarse a elementos relativos. Porque no respetan elementos static */
+    /* Controlan el eje Z -> profundidad */
+    top:10%;
+    right:10%;
+    width:15%;
+    z-index: 1 ;
+}
+.nube2{
+    position: absolute;
+    width: 25%;
+    right: 20%;
+    top:3%;
+    z-index: 2;
+}
+.obj1{
+    width: 30%;
+    position: absolute;
+    left:35%;
+    right: 35%;
+    top:25%
+}
+
+.navbar{
+    position:fixed; /* sticky*/
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.466);
+    width:100%;
+    z-index: 50;
+}
+.navbar .logo{
+    width:15%;
+    /* animation-name: opacidad1,luna1;
+    animation-duration: 2s,5s;
+    animation-delay: 0s,2s ;
+    animation-iteration-count: 1,infinite; */
+
+    animation: opacidad1 2s 0s 1 linear, luna1 5s 2s infinite linear;
+}
+/*Momento Zombieland*/
+
+@keyframes zombieland1{
+    0%{
+        transform: translateX(-400px)
+    }
+    100%{
+        transform: translateX(1400px);
+    }
+}
+@keyframes opacidad1{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+@keyframes luna1{
+    0%{transform: rotate(0)}
+    100%{transform: rotate(2turn);}
+}
+
+
+
+.tipo1,.tipo2{
+    position: absolute;
+    width:30%;
+    top:25%;
+    left:-20%;
+    /* transform: translateX(100%); */
+    animation-name: zombieland1;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+}
+.tipo1{
+    left:20%;
+}
+.tipo2:hover{
+    animation-play-state: paused;
+}
+
+/* Animacion por Steps -> animation-timing-function */
+@keyframes steps1{
+    0%{
+        background-position: 0px;
+    }
+    100%{
+        background-position: -2000px ;
+    }
+}
+
+.tipo3{
+    /* background-color: black; */
+    position: absolute;
+    left: 20%;
+    bottom: 10%;
+    animation-name: zombieland1;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    /* animation-direction: reverse; */
+    }
+    .zombi2{
+        transform: scale(-1,1);
+        background-image: url("../img/walkingdead.png");
+        width:200px;
+        height: 312px;
+        /* border:solid; */
+        animation-name: steps1;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        animation-timing-function: steps(10);
+        }
+    .sombra{
+        width: 110px;
+        height: 7px;
+        border-radius: 50%;
+        background: black;
+        filter: blur(10px);
+        transform: translateY(-5px);
+    }
+
