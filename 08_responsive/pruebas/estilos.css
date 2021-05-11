@@ -5,17 +5,140 @@
 	box-sizing: border-box;
 }
 
+body{
+	font-family: "Open Sans";
+	/* background: turquoise; */
+}
+
+	.header{
+		padding: 0 20px;
+		/* margin: 0 20px; */
+		background: rgba(255, 255, 255, 0.404);
+		margin-bottom: 2em ;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		}
+		.header .logo{ width: 20% ;}
+		.header .search{ width: 20%;}
+		.header .navbar{ width: 30%; text-align:right}
+
 #contenedor{
 	width: 90%;
+	max-width:1200px;
 	margin: 0 auto;
+	display:flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	}
+	.primero{
+		background: rgb(207,0,15);
+		width: 30%;
+		padding: 1.5%;
+	}
+	.segundo{
+		background: rgb(34,167,240);
+		width: 30%;
+		padding: 1.5%;
+	}
+	.tercero{
+		background: rgb(207,0,15);
+		width: 30%;
+		padding: 1.5%;
+	}
+
+.image img{
+	width:100%;
 }
-.primero{
-	background: rgb(207,0,15);
-	width: 30%;
-	padding: 1.5%;
+
+/* Media Queries 
+@media dispositivo operador (propiedad:valor) operador (propiedad:valor) {
+	... todo lo que agrega el mediaquerie, en caso de que la condicion se aplique
 }
-.segundo{
-	background: rgb(34,167,240);
-	width: 30%;
-	padding: 1.5%;
-	
+
+*/
+/* Disp. Grandes - 961-1200 */
+@media screen and (min-width:961px) and (max-width:1200px){
+	body{
+		background: tomato;
+	}
+	.primero,.segundo,.tercero{width:32%}
+}
+
+
+/* Disp. Medianos - 561-960 */
+@media screen and (min-width:561px) and (max-width:960px){
+		body{
+		background :violet;
+	}
+
+	/* header */
+	.header{
+		flex-wrap:wrap;
+		position: sticky;
+		top: 0;
+		z-index: 999999;
+		background: rgba(255, 255, 255, 0.822);
+	}
+	.header .navbar{
+		font-size: 1.5em;
+		width: 100%;
+		text-align: center;
+	}
+	.navbar a{
+		margin: 0 20px;
+	}
+
+	#contenedor{flex-wrap:wrap}
+	.primero{width:100%}
+	.primero .image{max-height: 300px;overflow:hidden}
+	.primero .image img{transform: translateY(-60px)}
+	.segundo,.tercero{width:50%}
+	.content h2,.content h3, .content p{
+		margin: 0.5em 0;
+	}
+	article:first-child .content{
+		display: flex;
+		}
+		.content h2{width:50%}
+
+
+
+}
+
+/* Disp. Pequeños - 0-560 */
+@media (max-width:560px){
+	body{
+		background: rgb(230, 33, 15);
+	}
+
+	.header{
+		position: sticky;
+		top: 0;
+		z-index: 999999;
+		background: rgba(255, 255, 255, 0.822);
+		flex-wrap:wrap;
+		margin-bottom: 0;
+		
+		}
+
+		.header .logo{width: 50%;}
+		.header .search{display: none;}
+		.header .navbar{width: 50%; text-align: center;}
+
+	#contenedor{
+		width:100%;
+		flex-wrap:wrap
+	}
+	.primero,.segundo,.tercero{
+		width:100%;
+		padding: 0.8em;
+	}	
+	.content h2,.content h3, .content p{
+		margin: 0.5em 0;
+		
+	}	
+
+
+}
