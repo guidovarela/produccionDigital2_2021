@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Open+Sans');
+*{
+	margin:0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+#contenedor{
+	width: 90%;
+	margin: 0 auto;
+}
+.primero{
+	background: rgb(207,0,15);
+	width: 30%;
+	padding: 1.5%;
+}
+.segundo{
+	background: rgb(34,167,240);
+	width: 30%;
+	padding: 1.5%;
+	
