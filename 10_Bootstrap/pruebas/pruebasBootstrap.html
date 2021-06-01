@@ -1,24 +1,136 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bootstrap</title>
-    
-    <!-- Normalize (CSS Reset) -->
-    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
-
-    <!-- Boostrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    
-    <link rel="stylesheet" href="css/estilos.css">
-    
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Probando Bootstrap</title>
+	
+	<!-- Instalamos Bootstrap CSS--> 
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+	
+	<link rel="stylesheet" href="css/estilos.css">
 </head>
+
 <body>
-    
 
 
-    <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+	<header class="bg1 container">
+		<p>.container es un contenedor responsive</p>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, libero repudiandae odit porro incidunt similique ab nulla dolore animi, sed veniam inventore culpa sunt placeat, est doloremque. Temporibus, saepe ullam? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus doloribus ab, alias voluptates repudiandae nesciunt at earum neque dolores rem tenetur provident excepturi illum deserunt obcaecati maiores id quia quam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores non fugiat, dolorum rem voluptates qui quibusdam obcaecati mollitia excepturi magnam harum sunt molestiae quae. Dicta iste repellendus fugiat velit nesciunt.</p>
+
+	</header>
+	<header class="bg2 container-fluid">
+		<p>.container-fluid es un fluido (width:100%)</p>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, libero repudiandae odit porro incidunt similique ab nulla dolore animi, sed veniam inventore culpa sunt placeat, est doloremque. Temporibus, saepe ullam? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus doloribus ab, alias voluptates repudiandae nesciunt at earum neque dolores rem tenetur provident excepturi illum deserunt obcaecati maiores id quia quam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores non fugiat, dolorum rem voluptates qui quibusdam obcaecati mollitia excepturi magnam harum sunt molestiae quae. Dicta iste repellendus fugiat velit nesciunt.</p>
+	</header>
+
+	<div class="container-fluid color1">
+		<div class="container">
+			<p>
+				Anidamos ambos containers
+			</p>
+		</div>
+	</div>
+
+	<div class="container-fluid ">
+		<div class="container-lg bg3">
+			<p>Este un un container definido por el breakpoint informado (en este caso es medium)</p>
+		</div>
+	</div>
+
+	<hr>
+
+	<div class="container">
+		<h2>Grilla y columnas</h2>
+	</div>
+
+	<section class="container-fluid bg4">
+		<div class="container">
+			<div class="row">
+				<!-- .row convierte al div en contenedor Flex -->
+				<div class="col">
+					<div class="caja bg5">
+						<p>Esta es la 1er columna</p>
+					</div>
+				</div>
+				<div class="col">
+					<div class="caja bg5">
+						<p>esta es la 2da columna</p>
+					</div>
+				</div>
+				<div class="col">
+					<div class="caja bg5">
+						<p>Esta es la 3er columna</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<h2>Columnas de distintos tamaños</h2>
+	<section class="container-fluid bg2">
+		<div class="container">
+			<div class="row filaNueva">
+				<div class="col-3 color2">
+					<p>Esta es la 1er columna</p>
+				</div>
+				<div class="col-5 color3">
+					<p>esta es la 2da columna</p>
+				</div>
+				<div class="col-3 color1">
+					<p>Esta es la 3er columna</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<h2>Columnas de ajustadas a los breakpoints</h2>
+	<section class="container-fluid color3">
+		<div class="container">
+			<div class="row">
+				<div class="col-md bg5">
+					<p>Esta es la 1er columna</p>
+				</div>
+				<div class="col-md bg6">
+					<p>esta es la 2da columna</p>
+				</div>
+				<div class="col-md bg5">
+					<p>Esta es la 3er columna</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<h2>Grilla responsive (adaptable a diferentes anchos)</h2>
+	<section class="container-fluid">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 col-md-6 col-sm-12 bg7">
+					<p>Esta es la 1er columna</p>
+				</div>
+				<div class="col-lg-3 col-md-6 col-sm-12 bg5">
+					<p>esta es la 2da columna</p>
+				</div>
+				<div class="col-lg-3 col-md-6 col-sm-12 ">
+					<p>Esta es la 3er columna</p>
+				</div>
+				<div class="col-lg-3 col-md-6 col-sm-12 bg7">
+					<p>Esta es la 3er columna</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+
+
+
+
+
+	<!-- Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 </body>
 </html>
