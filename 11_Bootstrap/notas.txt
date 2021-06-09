@@ -1,0 +1,25 @@
+
+atibuto class="" puede recibir mas de 1 clase.
+
+container
+
+.container-fluid -> full-width
+.container -> responsive -> media queries + margin + padding 
+
+    -> breakpoints
+        -> sm (desde 570px)
+        -> md / lg / xl
+        -> xxl (mas de 1400px)
+
+    Grid System (columnas)
+    .row -> flex-container / contenedor de las columnas / padding negativo
+        -> grilla de 12 espacios
+
+        -> .col * 12
+            -> .col-2
+            -> .col-(breakpoint) -> columnas responsive
+            -> .col-(breakpoint)-(cantidad) -> columnas responsive
+
+            -> Las columnas tambien tienen padding
+
+    
